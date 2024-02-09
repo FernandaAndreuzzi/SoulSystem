@@ -47,6 +47,15 @@
     <Compile Include="Core\Notifications\Notification.cs" />
     <Compile Include="Core\Notifications\Notifier.cs" />
     <Compile Include="Core\Services\BaseService.cs" />
+    <Compile Include="Models\Cliente.cs" />
+    <Compile Include="Models\Contato.cs" />
+    <Compile Include="Models\Endereco.cs" />
+    <Compile Include="Models\Enum\TipoContratacao.cs" />
+    <Compile Include="Models\Enum\TipoDiaDaSemana.cs" />
+    <Compile Include="Models\Enum\TipoEstado.cs" />
+    <Compile Include="Models\Enum\TipoSimNao.cs" />
+    <Compile Include="Models\Pessoa.cs" />
+    <Compile Include="Models\Funcionario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
