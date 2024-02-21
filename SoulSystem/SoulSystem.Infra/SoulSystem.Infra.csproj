@@ -61,15 +61,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\Context\SoulSystemContext.cs" />
+    <Compile Include="Data\Mapping\ClienteConfig.cs" />
+    <Compile Include="Data\Mapping\ContatoConfig.cs" />
+    <Compile Include="Data\Mapping\EnderecoConfig.cs" />
+    <Compile Include="Data\Mapping\FuncionarioConfig.cs" />
+    <Compile Include="Data\Mapping\PessoaConfig.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Data\Mapping\" />
     <Folder Include="Data\Repository\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SoulSystem.Business\SoulSystem.Business.csproj">
+      <Project>{20d98f9f-4bf8-479c-abce-f4523bfa9bf3}</Project>
+      <Name>SoulSystem.Business</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
