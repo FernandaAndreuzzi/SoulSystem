@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using System.Data.Entity;
 using System.Threading;
 using System.Data.Entity.ModelConfiguration.Conventions;
+using SoulSystem.Business.Models;
+using SoulSystem.Infra.Data.Mapping;
 
 namespace SoulSystem.Infra.Data.Context
 {
@@ -17,6 +19,12 @@ namespace SoulSystem.Infra.Data.Context
             Configuration.ProxyCreationEnabled = false;
             Configuration.LazyLoadingEnabled = false;
         }
+
+        public DbSet<Pessoa> Pessoas { get; set; }
+        public DbSet<Funcionario> Funcionarios { get; set; }
+        public DbSet<Cliente> Clientes { get; set; }
+        public DbSet<Endereco> Enderecos { get; set; }
+        public DbSet<Contato> Contatos { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
@@ -27,6 +35,12 @@ namespace SoulSystem.Infra.Data.Context
                 .Configure(p => p
                     .HasColumnType("varchar")
                     .HasMaxLength(255));
+           
+            modelBuilder.Configurations.Add(new PessoaConfig());
+            modelBuilder.Configurations.Add(new FuncionarioConfig());
+            modelBuilder.Configurations.Add(new ClienteConfig());
+            modelBuilder.Configurations.Add(new EnderecoConfig());
+            modelBuilder.Configurations.Add(new ContatoConfig());
 
             base.OnModelCreating(modelBuilder);
         }

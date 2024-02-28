@@ -30,6 +30,8 @@ namespace SoulSystem.Infra.Data.Mapping
             Property(f => f.NumeroCarteiraPlanoDeSaude)
                     .IsRequired();
 
+            HasRequired(p => p.Pessoa);
+
             ToTable("Clientes");
         }
     }

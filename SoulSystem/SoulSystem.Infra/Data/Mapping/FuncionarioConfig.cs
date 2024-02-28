@@ -24,6 +24,8 @@ namespace SoulSystem.Infra.Data.Mapping
 
             Property(f => f.Ativo);
 
+            HasRequired(p => p.Pessoa);
+
             ToTable("Funcionarios");
         }
     }

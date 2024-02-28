@@ -39,6 +39,8 @@ namespace SoulSystem.Infra.Data.Mapping
 
             Property(f => f.tipoEstado).HasColumnType("int");
 
+            HasRequired(p => p.Pessoa);
+
             ToTable("Enderecos");
         }
     }

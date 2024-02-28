@@ -13,7 +13,7 @@ namespace SoulSystem.Business.Core.Data
         Task Adicionar (TEntity entity);
         Task<TEntity> ObterPorId (Guid id);
         Task<List<TEntity>> ObterTodos ();
-        Task Atualizar (TEntity entity);
+        Task SalvarAlteracoes (TEntity entity);
         Task Excluir (Guid Id);
         Task<IEnumerable<TEntity>> Buscar(Expression<Func<TEntity, bool>> predicate);
         Task<int>SalvarAlteracoes();

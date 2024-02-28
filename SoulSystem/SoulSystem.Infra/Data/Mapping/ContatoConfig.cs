@@ -30,6 +30,8 @@ namespace SoulSystem.Infra.Data.Mapping
                      .IsRequired()
                      .HasMaxLength(255);
             
+            HasRequired(p => p.Pessoa);
+
             ToTable("Contato");
 
 

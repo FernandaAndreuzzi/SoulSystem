@@ -66,11 +66,15 @@
     <Compile Include="Data\Mapping\EnderecoConfig.cs" />
     <Compile Include="Data\Mapping\FuncionarioConfig.cs" />
     <Compile Include="Data\Mapping\PessoaConfig.cs" />
+    <Compile Include="Data\Repository\ClienteRepository.cs" />
+    <Compile Include="Data\Repository\ContatoRepository.cs" />
+    <Compile Include="Data\Repository\EnderecoRepository.cs" />
+    <Compile Include="Data\Repository\FuncionarioRepository.cs" />
+    <Compile Include="Data\Repository\PessoaRepository.cs" />
+    <Compile Include="Data\Repository\Repository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Data\Repository\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
