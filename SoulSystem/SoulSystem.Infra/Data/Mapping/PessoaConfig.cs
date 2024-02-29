@@ -1,6 +1,8 @@
 ﻿using SoulSystem.Business.Models;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Data.Entity.Infrastructure.Annotations;
 using System.Data.Entity.ModelConfiguration;
 using System.Linq;
 using System.Text;
@@ -24,11 +26,15 @@ namespace SoulSystem.Infra.Data.Mapping
 
             Property(f => f.Cpf) 
                 .IsRequired()
-                .HasMaxLength(255);
+                .HasMaxLength(255)
+                .HasColumnAnnotation("IX_Cpf",
+                    new IndexAnnotation(new IndexAttribute { IsUnique = true }));
 
             Property(f => f.Rg)
                 .IsRequired()
-                .HasMaxLength(255);
+                .HasMaxLength(255)
+                .HasColumnAnnotation("IX_Rg",
+                    new IndexAnnotation(new IndexAttribute { IsUnique = true }));
 
             Property(f => f.DataDeNascimento);
 
