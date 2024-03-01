@@ -1,20 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data.Entity;
-using System.Threading;
-using System.Data.Entity.ModelConfiguration.Conventions;
-using SoulSystem.Business.Models;
+﻿using SoulSystem.Business.Models;
+using SoulSystem.Infra;
 using SoulSystem.Infra.Data.Mapping;
+using System;
+using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration.Conventions;
+using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace SoulSystem.Infra.Data.Context
 {
 
     public class SoulSystemContext : DbContext
     {
-        public SoulSystemContext() : base("DefaultConnection")
+        public SoulSystemContext() : base("name=ConnectionStringName")
         {
             Configuration.ProxyCreationEnabled = false;
             Configuration.LazyLoadingEnabled = false;

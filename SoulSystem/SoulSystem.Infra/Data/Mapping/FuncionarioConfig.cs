@@ -20,7 +20,7 @@ namespace SoulSystem.Infra.Data.Mapping
 
             Property(f => f.DataDeContratacao);
             
-            Property(f => f.TipoContrato).HasColumnType("int");
+            Property(f => f.TipoContrato).HasColumnType("int8");
 
             Property(f => f.Ativo);
 

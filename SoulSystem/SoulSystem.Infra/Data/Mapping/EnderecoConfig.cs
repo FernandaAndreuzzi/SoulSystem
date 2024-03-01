@@ -37,7 +37,7 @@ namespace SoulSystem.Infra.Data.Mapping
             Property(c => c.Cidade)
                 .IsRequired();
 
-            Property(f => f.tipoEstado).HasColumnType("int");
+            Property(f => f.tipoEstado).HasColumnType("int8");
 
             HasRequired(p => p.Pessoa);
 
