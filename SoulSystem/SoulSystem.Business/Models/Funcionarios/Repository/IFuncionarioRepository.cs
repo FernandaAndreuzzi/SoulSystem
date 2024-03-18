@@ -6,11 +6,12 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SoulSystem.Business.Models.Clientes
+namespace SoulSystem.Business.Models.Funcionarios
 {
-    public interface IClienteRepository : IRepository<Cliente>
+    public interface IFuncionarioRepository : IRepository<Funcionario>
     {
-        
+        Task<IEnumerable<Cliente>> ObterFuncionarioPorNome(string nome);
+
+
     }
-       
 }

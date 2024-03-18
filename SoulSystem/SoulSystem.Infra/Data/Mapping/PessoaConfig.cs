@@ -51,5 +51,5 @@ namespace SoulSystem.Infra.Data.Mapping
 
            
         }
-    }
+    } 
 }

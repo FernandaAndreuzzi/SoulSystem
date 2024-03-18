@@ -6,10 +6,11 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SoulSystem.Business.Models.Funcionarios
+namespace SoulSystem.Business.Models.Enderecos
 {
-    public interface IFuncionarioRepository : IRepository<Funcionario>
+    public interface IEnderecoRepository : IRepository<Endereco>
     {
-        
+        Task<Endereco> ObterEnderecoPorPessoa(Guid pessoaId);
     }
+        
 }

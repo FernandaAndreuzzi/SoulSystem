@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FluentValidation, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentValidation.9.2.2\lib\net461\FluentValidation.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -47,24 +50,42 @@
     <Compile Include="Core\Notifications\Notification.cs" />
     <Compile Include="Core\Notifications\Notifier.cs" />
     <Compile Include="Core\Services\BaseService.cs" />
+    <Compile Include="Core\Validations\Documentos\ValidacaoDocumentos.cs" />
     <Compile Include="Models\Clientes\Cliente.cs" />
-    <Compile Include="Models\Clientes\IClienteRepository.cs" />
-    <Compile Include="Models\Contatos\IContatoRepository.cs" />
-    <Compile Include="Models\Enderecos\IEnderecoRepository.cs" />
-    <Compile Include="Models\Funcionarios\IFuncionarioRepository.cs" />
+    <Compile Include="Models\Clientes\Repository\IClienteRepository.cs" />
+    <Compile Include="Models\Clientes\Services\ClienteService.cs" />
+    <Compile Include="Models\Clientes\Validations\ClienteValidacoes.cs" />
+    <Compile Include="Models\Contatos\Services\ContatoService.cs" />
+    <Compile Include="Models\Contatos\Services\IContatoService.cs" />
+    <Compile Include="Models\Contatos\Validations\ContatoValidacoes.cs" />
+    <Compile Include="Models\Clientes\Services\IClienteService.cs" />
+    <Compile Include="Models\Contatos\Repository\IContatoRepository.cs" />
+    <Compile Include="Models\Enderecos\Services\EnderecoService.cs" />
+    <Compile Include="Models\Enderecos\Services\IEnderecoService.cs" />
+    <Compile Include="Models\Enderecos\Validations\EnderecoValidacoes.cs" />
+    <Compile Include="Models\Enderecos\Repository\IEnderecoRepository.cs" />
+    <Compile Include="Models\Funcionarios\Services\FuncionarioService.cs" />
+    <Compile Include="Models\Funcionarios\Services\IFuncionarioService.cs" />
+    <Compile Include="Models\Funcionarios\Validations\FuncionarioValidacoes.cs" />
+    <Compile Include="Models\Funcionarios\Repository\IFuncionarioRepository.cs" />
     <Compile Include="Models\Contatos\Contato.cs" />
     <Compile Include="Models\Enderecos\Endereco.cs" />
     <Compile Include="Models\Enum\TipoContratacao.cs" />
     <Compile Include="Models\Enum\TipoDiaDaSemana.cs" />
     <Compile Include="Models\Enum\TipoEstado.cs" />
     <Compile Include="Models\Enum\TipoSimNao.cs" />
-    <Compile Include="Models\Pessoas\IPessoaRepository.cs" />
+    <Compile Include="Models\Pessoas\Repository\IPessoaRepository.cs" />
     <Compile Include="Models\Pessoas\Pessoa.cs" />
     <Compile Include="Models\Funcionarios\Funcionario.cs" />
+    <Compile Include="Models\Pessoas\Repository\PessoaRepository.cs" />
+    <Compile Include="Models\Pessoas\Services\IPessoaService.cs" />
+    <Compile Include="Models\Pessoas\Services\PessoaService.cs" />
+    <Compile Include="Models\Pessoas\Validations\PessoaValidacoes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Core\Validations\" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

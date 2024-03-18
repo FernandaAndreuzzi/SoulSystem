@@ -20,5 +20,22 @@ namespace SoulSystem.Infra.Data.Repository
         {
             return await Db.Pessoas.Where(w => w.Nome.ToUpper().Contains(nome.ToUpper())).ToListAsync();
         }
+
+        public async Task<Pessoa> ObterPessoaPorCpf(string cpf)
+        {
+            return await Db.Pessoas.Where(w => w.Cpf.ToUpper().Contains(cpf.ToUpper())).FirstOrDefaultAsync();
+        }
+
+        public async Task<IEnumerable<Pessoa>> ObterPessoaPorNome(string nome)
+        {
+            return await Db.Pessoas.Where(w => w.Nome.ToUpper().Contains(nome.ToUpper())).ToListAsync();
+        }
+
+        public async Task<Pessoa> ObterPorId(Pessoa pessoa)
+        {
+            return await Db.Pessoas.Where(w => w.Id == pessoa.Id).FirstOrDefaultAsync();
+        }
+
+        async Task<List<Pessoa>> IPessoaRepository.ObterPessoaPorNome(string nome) => await Db.Pessoas.Where(w=>w.Nome.ToUpper().Contains(nome.ToUpper())).ToListAsync();    
     }
 }

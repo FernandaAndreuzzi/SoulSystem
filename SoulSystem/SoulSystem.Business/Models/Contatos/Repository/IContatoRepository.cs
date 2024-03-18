@@ -6,10 +6,11 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SoulSystem.Business.Models.Enderecos
+namespace SoulSystem.Business.Models.Contatos
 {
-    public interface IEnderecoRepository : IRepository<Endereco>
+    public interface IContatoRepository : IRepository<Contato>
     {
+        Task<IEnumerable<Contato>> ObterContatoPorNome(string nome);
     }
-        
+       
 }
