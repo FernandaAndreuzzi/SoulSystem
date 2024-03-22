@@ -13,7 +13,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Controllers\" />
     <Folder Include="Extensions\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SoulSystem.Business\SoulSystem.Business.csproj" />
   </ItemGroup>
 
 </Project>

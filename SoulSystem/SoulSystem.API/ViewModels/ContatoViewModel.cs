@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using SoulSystem.Business.Models;
+using System.ComponentModel.DataAnnotations;
 
 namespace SoulSystem.API.ViewModels
 {

@@ -30,12 +30,6 @@ namespace SoulSystem.Infra.Data.Mapping
                 .HasColumnAnnotation("IX_Cpf",
                     new IndexAnnotation(new IndexAttribute { IsUnique = true }));
 
-            Property(f => f.Rg)
-                .IsRequired()
-                .HasMaxLength(255)
-                .HasColumnAnnotation("IX_Rg",
-                    new IndexAnnotation(new IndexAttribute { IsUnique = true }));
-
             Property(f => f.DataDeNascimento);
 
             Property(f => f.Escolaridade)

@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using SoulSystem.Business.Models;
+using SoulSystem.Business.Models.Enum;
+using System.ComponentModel.DataAnnotations;
 
 namespace SoulSystem.API.ViewModels
 {
