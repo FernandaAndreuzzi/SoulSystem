@@ -3,29 +3,37 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static SoulSystem.Business.Core.Notifications.Notifier;
 
 namespace SoulSystem.Business.Core.Notifications
 {
     public class Notifier : INotifier
     {
+        private List<Notification> _notificacoes;
+
+        public Notifier()
+        {
+            _notificacoes = new List<Notification>();
+        }
+
         public void CriarNotificacao(Notification notification)
         {
-            throw new NotImplementedException();
+            _notificacoes.Add(notification);
         }
 
         public List<Notification> ObterNotificacoes()
         {
-            throw new NotImplementedException();
+            return _notificacoes;
         }
 
         public bool RemoverNotificacoesDuplicadas()
         {
-            throw new NotImplementedException();
+            throw new System.NotImplementedException();
         }
 
         public bool TemNotificacao()
         {
-            throw new NotImplementedException();
+            return _notificacoes.Any();
         }
     }
 }

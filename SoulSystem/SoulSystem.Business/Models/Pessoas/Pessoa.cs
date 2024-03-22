@@ -14,7 +14,6 @@ namespace SoulSystem.Business.Models
         public string Nome { get; set; }
         public string Genero { get; set; }
         public string Cpf { get; set; }
-        public string Rg { get; set; }
         public DateTime DataDeNascimento { get; set;}
         public string Escolaridade { get; set;}
         public string Profissao { get; set;}
